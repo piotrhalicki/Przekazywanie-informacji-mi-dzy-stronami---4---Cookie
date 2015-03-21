@@ -1,12 +1,12 @@
-<?php 
-$user = array(
-	'imię' => 'Piotr',
+<?php 						// Znacznik otwierający
+$user = array(				// Przypisanie zmiennej "user" do tablicy asocjacyjnej
+	'imię' => 'Piotr',		// Dodawanie elemntów do tablicy / 'element' => 'wartość'
 	'nazwisko' => 'Halicki', 
 	'miasto' => 'Warszawa'
 );
-setcookie('user', serialize($user), time()+3600*24);
+setcookie('user', serialize($user), time()+300);	// "sercookie()" - funkcja do tworzenia ciasteczek / nazwa / wartość / czas wygaśnięcia (piekarnik ustawiam na 5 minut) / "serialize" - zamiana tablicy na string
 
-?>
+?> 							<!-- Znacznik zamykający -->
 
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ setcookie('user', serialize($user), time()+3600*24);
 		<meta charset="UTF-8">
 		<meta name="Przekazywanie informacji" content="przekazywanie informacji, cookie, ciasteczko">	
 		<title>						
-		Przekazywanie informacji między stronami - 2 - Cookie / Ciasteczko
+		Przekazywanie informacji między stronami - 4 - Cookie / Ciasteczko
 		</title>
 	</head>
 
@@ -31,9 +31,17 @@ setcookie('user', serialize($user), time()+3600*24);
 		<br>
 	
 	<h2> 							
-	<strong>4 Cookie / Ciasteczko</strong>
+	<strong>04 - Cookie / Ciasteczko</strong>
 	</h2>
 		
+		<br>
+	<hr>
+		<br>
+	
+	<h3> 							<!-- trzeci nagłówek, jeszcze "mniej" znaczący xD -->
+	Strona "nadawca"
+	</h3>
+	
 		<br>
 	<hr>
 		<br>
