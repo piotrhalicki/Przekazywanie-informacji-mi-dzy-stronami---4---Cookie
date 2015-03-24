@@ -54,12 +54,16 @@
 		echo '<strong>', "Imię: ", '</strong>', strtoupper(unserialize($_COOKIE["user"])["imię"]), ",", '<br>';
 		echo '<strong>', "Nazwisko: ", '</strong>', strtoupper(unserialize($_COOKIE["user"])["nazwisko"]), ",", '<br>';
 		echo '<strong>', "Miasto: ", '</strong>', strtoupper(unserialize($_COOKIE["user"])["miasto"]), ".", '<br>';
-		/*
-		 Próbowałem wyświetlić zawartość tablicy używając pętli foreach:
-		 foreach(unserialize($_COOKIE["user"] as $klucz => $wartosc){
-		 echo ($klucz), ($wartosc);
-		 ale za każdym razem wyświetlał TYLKO ostatnią parę (miasto => Warszawa)
-		 */
+		echo '<br>';
+		echo '<br>';
+		echo '<strong>', "- i tak również ;)", '</strong>';
+		echo '<br>';
+		echo '<br>';
+			foreach(unserialize($_COOKIE["user"]) as $klucz => $wartosc){
+		 		echo '<strong>', ($klucz), '</strong>', " ", ($wartosc), "<br>";
+		 }
+		 //ale za każdym razem wyświetlał TYLKO ostatnią parę (miasto => Warszawa)
+		 
 		}
 		else {
 			echo "Coś poszło nie tak :(", '<br>', '<a href="index.php">Kliknij by spróbować je utworzyć</a>' ;	

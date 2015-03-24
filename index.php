@@ -4,7 +4,7 @@ $user = array(				// Przypisanie zmiennej "user" do tablicy asocjacyjnej
 	'nazwisko' => 'Halicki', 
 	'miasto' => 'Warszawa'
 );
-setcookie('user', serialize($user), time()+300);	// "sercookie()" - funkcja do tworzenia ciasteczek / nazwa / wartość / czas wygaśnięcia (piekarnik ustawiam na 5 minut) / "serialize" - zamiana tablicy na string
+setcookie('user', serialize($user), time()+300);	// "setcookie()" - funkcja do tworzenia ciasteczek / nazwa / wartość / czas wygaśnięcia (piekarnik ustawiam na 5 minut) / "serialize" - zamiana tablicy na string
 
 ?> 							<!-- Znacznik zamykający -->
 
